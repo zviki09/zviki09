@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- saved from url=(0527)http://127.0.0.1:5500/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%201/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%202/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%205/%D7%A9%D7%A2%D7%99%D7%95%D7%A8%206/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%208/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%209/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2010/%D7%A9%D7%99%D7%A2%D7%95%D7%A811/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2012/%D7%A9%D7%99%D7%A2%D7%95%D7%A815/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2016/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2017/gpt/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2019/%D7%A9%D7%99%D7%A2%D7%95%D7%A8%2020/indx.html -->
+<html lang="he"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תפוס את הכדור</title>
+    <link rel="stylesheet" href="./תפוס את הכדור_files/styles.css">
+</head>
+<body>
+    <div id="menu" class="hidden">
+        <h1>תפוס את הכדור</h1>
+        <button onclick="startGame()">התחל משחק</button>
+    </div>
+    <div id="game" class="hidden">
+        <div id="info">
+            <span id="score">ניקוד: 1</span>
+            <span id="time">זמן: 0</span>
+            <span id="level-info">שלב: 1 | נקודות נדרשות: 10</span>
+        </div>
+        <div id="game-board">
+            <div id="ball" style="left: 316.084px; top: 107.054px;"></div>
+        </div>
+        <div id="game-over" class="">
+            <h2>סיום משחק</h2>
+            <p id="final-score">ניקוד סופי: 1</p>
+            <p id="level-status">לא עברת את השלב!</p>
+            <button onclick="restartGame()">התחל מחדש</button>
+        </div>
+    </div>
+    <script src="./תפוס את הכדור_files/script.js.הורדה"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
